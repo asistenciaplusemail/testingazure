@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: asistenciaplusemailtestingazure 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: asistenciaplusemailtestingazure
+  template:
+    metadata:
+      labels:
+        app: asistenciaplusemailtestingazure 
+    spec:
+      containers:
+        - name: asistenciaplusemailtestingazure 
+          image: registrodecotenedores.azurecr.io/asistenciaplusemailtestingazure
+          ports:
+          - containerPort: 80
